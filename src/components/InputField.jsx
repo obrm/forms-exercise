@@ -8,8 +8,7 @@ function InputField({ label, type, name, value, error, onChange }) {
         name={name} 
         value={value} 
         className={error ? 'error' : ''} 
-        onChange={onChange}
-        required 
+        onChange={onChange}         
       />
       <div className="error-message">{error}</div>
     </div>

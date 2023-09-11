@@ -1,7 +1,10 @@
+import UserForm from './pages/UserForm';
+
 function App() {
 
   return (
     <>
+      <UserForm />
     </>
   )
 }

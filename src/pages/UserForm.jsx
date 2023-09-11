@@ -37,7 +37,7 @@ function UserForm() {
         
         <InputField 
           label="Email" 
-          type="email" 
+          type="text" 
           name="email" 
           value={formData.email} 
           error={errors.email} 
