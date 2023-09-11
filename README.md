@@ -26,7 +26,7 @@ You are provided with a `UserForm` component that contains the structure for a u
       - Use the component's state update function `setFormData` to modify the state.
       - Maintain the previous state values while updating the particular field's value that the user is editing. This ensures that only the current field's data changes while the other fields' data remain intact.
       - To achieve this, spread out the previous state and then override the value for the specific field using the extracted `name` as the key and the extracted `value` as its value.
-      
+      #####
       ```javascript
       setFormData(prevState => ({
         ...prevState,
@@ -39,7 +39,7 @@ You are provided with a `UserForm` component that contains the structure for a u
       - Use the component's state update function `setErrors` to modify the error state.
       - Similarly, spread out the previous error state to maintain the existing errors for other fields.
       - Then, set the error for the field being edited to `null`, indicating there's no error for that field at the moment.
-      
+      #####
       ```javascript
       setErrors(prevState => ({
         ...prevState,
@@ -66,7 +66,7 @@ You are provided with a `UserForm` component that contains the structure for a u
         - If the username length is less than the required minimum (e.g., less than 3 characters), then:
             - Update the errors object to include a message about the username's error.
             - Change the form's validity flag to `false`.
-        
+        #####
         ```javascript
         if (formData.username.length < 3) {
           newErrors.username = "Username must be at least 3 characters long.";
@@ -90,7 +90,7 @@ You are provided with a `UserForm` component that contains the structure for a u
 
     6. **Update Errors State:**
         - Now that validation checks are complete, set the component's `errors` state with the constructed errors object. This will display the validation messages to the user, if any are present.
-        
+        #####
         ```javascript
         setErrors(newErrors);
         ```
